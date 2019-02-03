@@ -12,6 +12,7 @@ install: make install
 branches:
   only:
   - develop
+  - travis-testing
 
 jobs:
   include:
