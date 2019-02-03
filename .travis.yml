@@ -13,8 +13,6 @@ env: GO111MODULE=on
 before_install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo chown -R $(whoami) /usr/local; fi
 
-install: make install
-
 branches:
   only:
   - develop
@@ -22,6 +20,11 @@ branches:
 
 jobs:
   include:
+  - stage: build
+    name: build
+    script:
+      - make install
+      - make build
   - stage: test
     name: lint
     install: true # this skips the installation step
