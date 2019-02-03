@@ -5,6 +5,7 @@ go: 1.11.x
 os:
   - linux
   - osx
+  - windows
 
 env: GO111MODULE=on
 
