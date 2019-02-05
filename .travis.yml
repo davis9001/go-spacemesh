@@ -1,4 +1,4 @@
-f4f7b53528914352fe84f9ce8a9cfcefea561db9language: go
+language: go
 sudo: false
 go: 1.11.x
 
