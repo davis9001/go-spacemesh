@@ -1,16 +1,15 @@
-language: go
+f4f7b53528914352fe84f9ce8a9cfcefea561db9language: go
 sudo: false
 go: 1.11.x
 
 os:
   - linux
   - osx
-  - windows
 
 env: GO111MODULE=on
 
-# for some reason /usr/local is owned by a different user in travis, so we transfer ownership to the current user:
 before_install:
+  # for some reason /usr/local is owned by a different user in travis on linux, so we transfer ownership to the current user:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then sudo chown -R $(whoami) /usr/local; fi
 
 install: make install
